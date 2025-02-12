@@ -1,10 +1,14 @@
 import "./styles.css";
 
 export default function App() {
+  let fetchData = async (searchValue) => {
+    let data = await fetch(
+      `https://dummyjson.com/products/search?q=${searchValue}`
+    );
+  };
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <input type="text" className="inputText" />
     </div>
   );
 }
